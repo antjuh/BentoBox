@@ -1,0 +1,90 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model Products {
+  id            Int     @id @default(autoincrement())
+  imageUrl      String?  
+  name          String
+  price         Decimal
+  categ_id      Int
+  category      Categories @relation(fields: [categ_id], references: [id])
+  reviews       Reviews[]
+  orderProducts OrderProducts[]
+}
+
+model Categories {
+  id        Int     @id @default(autoincrement())
+  name      String
+  products  Products[]
+}
+
+model Users {
+  id        Int     @id @default(autoincrement())
+  firstName String
+  lastName  String
+  username  String
+  lastname  String
+  reviews   Reviews[]
+  orders    Orders[]
+  payments  Payments[]
+}
+
+model Reviews {
+  id        Int     @id @default(autoincrement())
+  content   String
+  rating    Int
+  userId    Int
+  user      Users @relation(fields: [userId], references: [id])
+  productId Int
+  product   Products @relation(fields: [productId], references: [id])
+}
+
+model Orders {
+  id            Int     @id @default(autoincrement())
+  orderDate     DateTime
+  userId        Int
+  user          Users @relation(fields: [userId], references: [id])
+  orderProducts OrderProducts[]
+  payments      Payments[]
+}
+
+model OrderProducts {
+  orderProductId  Int @id @default(autoincrement())
+  productId       Int
+  product         Products @relation(fields: [productId], references: [id])
+  quantity        Int
+  orderId         Int
+  order           Orders @relation(fields: [orderId], references: [id])
+}
+
+model Payments {
+  id            Int @id @default(autoincrement())
+  userId        Int
+  user          Users @relation(fields: [userId], references: [id])
+  orderId       Int
+  order         Orders @relation(fields: [orderId], references: [id])
+  paymentDate   DateTime
+  paymentMethod String
+  amount        Decimal
+}
+
+model Administrators {
+  id        Int @id @default(autoincrement())
+  firstName String
+  lastName  String
+  username  String
+  password  String
+}
