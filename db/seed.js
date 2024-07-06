@@ -193,7 +193,24 @@ async function main() {
             categ_id: 3
         }
     });
+    
+    // await prisma.products.create({
+    //     data: {
+    //         name: "Test Food",
+    //         price: 0.00,
+    //         categ_id: 3
+    //     }
+    // })
 
+    // async function deleteProduct (id) {
+    //     await prisma.products.delete({
+    //         where: {
+    //             id: id,
+    //         },
+    //     })
+    // }
+    
+    // deleteProduct(21);
 
 
 

@@ -7,5 +7,6 @@ apiRouter.get("/", (req, res) => {
 
 
 apiRouter.use("/products", require("./products"));
+apiRouter.use("/categories", require("./categories"));
 
 module.exports = apiRouter;
