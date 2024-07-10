@@ -36,7 +36,7 @@ model Users {
   firstName String
   lastName  String
   username  String
-  lastname  String
+  password  String
   reviews   Reviews[]
   orders    Orders[]
   payments  Payments[]
@@ -54,7 +54,7 @@ model Reviews {
 
 model Orders {
   id            Int     @id @default(autoincrement())
-  orderDate     DateTime
+  orderDate     DateTime?
   userId        Int
   user          Users @relation(fields: [userId], references: [id])
   orderProducts OrderProducts[]

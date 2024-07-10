@@ -193,24 +193,45 @@ async function main() {
             categ_id: 3
         }
     });
-    
-    // await prisma.products.create({
-    //     data: {
-    //         name: "Test Food",
-    //         price: 0.00,
-    //         categ_id: 3
-    //     }
-    // })
 
-    // async function deleteProduct (id) {
-    //     await prisma.products.delete({
-    //         where: {
-    //             id: id,
-    //         },
-    //     })
-    // }
+    //Creating Users
+    await prisma.users.create({
+        data: {
+            firstName: "Bob",
+            lastName: "Robertson",
+            username: "bobrob",
+            password: "bobpassword"
+        }
+    });
+    await prisma.users.create({
+        data: {
+            firstName: "Susan",
+            lastName: "Aldridge",
+            username: "susald",
+            password: "suspassword"
+        }
+    });
+    await prisma.users.create({
+        data: {
+            firstName: "Terry",
+            lastName: "Crooze",
+            username: "tercro",
+            password: "terpassword"
+        }
+    });
     
-    // deleteProduct(21);
+    await prisma.orders.create({
+        data: {
+            userId: 1
+        }
+    });
+    await prisma.orderProducts.create({
+        data: {
+            productId: 1,
+            quantity: 2,
+            orderId: 1
+        }
+    });
 
 
 

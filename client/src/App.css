@@ -1,42 +1,94 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@font-face {
+  font-family: 'Eugusto';
+  src: url('./assets/EugustoFont.otf');
+}
+@font-face {
+  font-family: 'Urbanist';
+  src: url('./assets/UrbanistFont.ttf');
+}
+
+body {
   text-align: center;
+  background-color: #888;
+  padding-top: 100px;
+  
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+a {
+  text-decoration: none;
+  
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.navbar {
+  margin: 0px;
+  padding: 0px;
+  background-color: beige;
+  height: 80px;
+  overflow: hidden;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  position: fixed;
+  > h1 {
+    font-size: 25px;
+    font-family: 'Urbanist';
+    margin-right: 50px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.navLinks {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  > a > p {
+    font-size: 20px;
+    color: #888;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.navLogo {
+  height: 70px;
+  margin: 5px;
+
+}
+
+.title {
+  text-align: center;
+  margin-left: 20px;
+  margin-top: 0px;
+  padding: 0px;
+  display: flex;
+  flex: row;
+  align-items: center;
+  background-color: beige;
+  width: 600px;
+  > h1 {
+    font-family: 'Eugusto';
   }
 }
 
-.card {
-  padding: 2em;
+.homePage {
+  width: 100%;
+  height: 1000px;
+  padding-right: 100px;
+  
+  /* background-color: white; */
 }
 
-.read-the-docs {
-  color: #888;
+.allProducts {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.itemCard {
+  border: 3px solid black;
+  height: 100px;
+  width: 100px;
+  margin: 20px;
 }
