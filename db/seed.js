@@ -228,10 +228,18 @@ async function main() {
     await prisma.orderProducts.create({
         data: {
             productId: 1,
-            quantity: 2,
+            quantity: 1,
             orderId: 1
         }
     });
+    await prisma.orderProducts.create({
+        data: {
+            productId: 2,
+            quantity: 1,
+            orderId: 1
+        }
+    });
+
 
 
 

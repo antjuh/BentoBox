@@ -55,19 +55,20 @@ model Reviews {
 model Orders {
   id            Int     @id @default(autoincrement())
   orderDate     DateTime?
-  userId        Int
-  user          Users @relation(fields: [userId], references: [id])
+  userId        Int?
+  user          Users? @relation(fields: [userId], references: [id])
   orderProducts OrderProducts[]
   payments      Payments[]
 }
 
 model OrderProducts {
   id  Int @id @default(autoincrement())
-  productId       Int
+  productId       Int 
   product         Products @relation(fields: [productId], references: [id])
   quantity        Int
   orderId         Int
   order           Orders @relation(fields: [orderId], references: [id])
+  
 }
 
 model Payments {
