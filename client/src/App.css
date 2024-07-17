@@ -161,7 +161,8 @@ a {
 }
 
 #whyBtn:hover {
-  border-color: #235945;
+  /* border-color: #235945; */
+  border: #235945 1px solid;
 }
 
 
@@ -196,7 +197,63 @@ a {
   height: 500px;
   margin: 0px;
   padding: 0px;
-  > h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#aboutInfo {
+  background-color: #fbfdf2;
+  height: 350px;
+  width: 90%;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.infoCard {
+  height: 300px;
+  width: 550px;
+  /* border: 2px solid ; */
+  display: flex;
+  align-items: center;
+}
+
+.imgBg {
+  background-color: #235945;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > img {
+    height: 170px;
+    width: 170px;
+  }
+}
+
+.infoDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 15px;
+  width: 300px;
+  /* border: 2px solid; */
+  > h2 {
+    font-family: 'Urbanist';
+    font-size: 27px;
+    margin: 0px;
+    margin-bottom: 5px;
+  }
+  > p {
+    font-family: 'Urbanist';
+    font-size: 19px;
+    text-align: left;
     margin: 0px;
   }
 }
@@ -214,4 +271,137 @@ a {
   height: 100px;
   width: 100px;
   margin: 20px;
+}
+
+#butStatement {
+  background-color: #fbfdf2;
+  height: 90px;
+  width: 50%;
+  border-radius: 0px 0px 100px 100px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  > h2 {
+    margin: 0px;
+    font-family: 'Urbanist';
+  }
+  > h3 {
+    margin: 0px;
+    font-family: 'Urbanist';
+    font-size: 20px;
+  }
+}
+
+#toTopThree {
+  border-radius: 0px 0px 40px 40px;
+  background-color: #fbfdf2;
+}
+
+#topThree {
+  height: 850px;
+  width: 100%;
+  /* background-color:#529d65; */
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.reviewCard {
+  /* border: 2px solid; */
+  height: 200px;
+  width: 800px;
+  background-color:#529d65;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.reviewImg {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  
+}
+
+.reviewImgHolder {
+  height: 125px;
+  width: 125px;
+  background-color: #235945;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 75px;
+
+}
+
+
+.reviewInfo {
+  display: flex;
+  flex-direction: column;
+  background-color: #6ac076;
+  border: 6px ridge #235945;
+  align-items: start;
+  justify-content: center;
+  height: 200px;
+  margin-left: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 400px;
+  text-align: left;
+  > h2 {
+    margin: 0px;
+    font-family: 'Eugusto';
+  }
+  > p {
+    margin: 2px;
+    font-size: 19px;
+    font-family: 'Urbanist';
+  }
+}
+.reviewItem {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 175px;
+  justify-content: center;
+  /* border: 2px solid; */
+  align-items: center;
+  margin-left: 10px;
+  > h2 {
+    margin: 0px;
+    font-family: 'Eugusto';
+  }
+}
+
+.ratingHolder{
+  position: relative;
+  text-align: center;
+  height: 200px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid; */
+}
+
+.star {
+  height: 100px;
+  width: 100px;
+}
+
+.rating {
+  position:absolute;
+  top: 50;
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+}
+
+.introTop {
+  font-family: 'Urbanist';
+  font-size: 30px;
 }

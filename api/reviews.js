@@ -8,7 +8,8 @@ reviewRouter.get('/', async (req, res) => {
     try {
         const reviews = await prisma.reviews.findMany({
             include: {
-                product: true
+                product: true,
+                user: true,
             },
             orderBy: {
                 rating: 'desc'
@@ -25,7 +26,8 @@ reviewRouter.get('/topThree', async (req, res) => {
     try {
         const reviews = await prisma.reviews.findMany({
             include: {
-                product: true
+                product: true,
+                user: true,
             },
             orderBy: {
                 rating: 'desc'

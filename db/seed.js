@@ -47,7 +47,7 @@ async function main() {
     });
     await prisma.products.create({
         data: {
-            // imageUrl: ,
+            imageUrl: "../src/assets/menu/salmonRoll.jfif",
             name: "Salmon Roll",
             price: 16.89,
             categ_id: 1
@@ -63,7 +63,7 @@ async function main() {
     });
     await prisma.products.create({
         data: {
-            // imageUrl: ,
+            imageUrl: "../src/assets/menu/philidelphiaRoll.jpg",
             name: "Philidelphia Roll",
             price: 10.89,
             categ_id: 1
@@ -79,7 +79,7 @@ async function main() {
     });
     await prisma.products.create({
         data: {
-            // imageUrl: ,
+            imageUrl: "../src/assets/menu/spiderRoll.jfif",
             name: "Spider Roll",
             price: 14.89,
             categ_id: 1
