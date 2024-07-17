@@ -239,6 +239,38 @@ async function main() {
             orderId: 1
         }
     });
+    await prisma.reviews.create({
+        data: {
+            content:"The salmon roll is the single best thing I have ever tried! And I hate sushi!",
+            rating: 5,
+            userId: 1,
+            productId: 3,
+        }
+    })
+    await prisma.reviews.create({
+        data: {
+            content:"Amazing, fresh ingredients!",
+            rating: 4.5,
+            userId: 2,
+            productId: 5,
+        }
+    })
+    await prisma.reviews.create({
+        data: {
+            content:"I thought it would come with spiders :( ",
+            rating: 5,
+            userId: 3,
+            productId: 7,
+        }
+    })
+    await prisma.reviews.create({
+        data: {
+            content:"I hate this thing",
+            rating: 1.5,
+            userId: 3,
+            productId: 12,
+        }
+    })
 
 
 

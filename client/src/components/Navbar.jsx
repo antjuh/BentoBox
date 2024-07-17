@@ -10,6 +10,7 @@ const NavBar = () => {
 
     return (
         <>
+            <div className="outerNav">
             <div className="navbar">
                 <Link to={"/"}>
                     <img src={logo} className="navLogo"/>
@@ -27,6 +28,7 @@ const NavBar = () => {
                     
                 </div>
                 
+            </div>
             </div>
         </>
     )

@@ -45,7 +45,7 @@ model Users {
 model Reviews {
   id        Int     @id @default(autoincrement())
   content   String
-  rating    Int
+  rating    Decimal
   userId    Int
   user      Users @relation(fields: [userId], references: [id])
   productId Int

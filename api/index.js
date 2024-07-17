@@ -9,5 +9,6 @@ apiRouter.get("/", (req, res) => {
 apiRouter.use("/products", require("./products"));
 apiRouter.use("/categories", require("./categories"));
 apiRouter.use("/cart", require("./orderProducts"));
+apiRouter.use("/reviews", require("./reviews"));
 
 module.exports = apiRouter;
