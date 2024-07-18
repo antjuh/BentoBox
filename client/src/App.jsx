@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from './components/Footer'
 import NavBar from './components/Navbar'
 import AllSushi from './routes/AllSushi'
 import Cart from './routes/Cart'
@@ -16,6 +17,8 @@ function App() {
         <Route path="/menu" element={<AllSushi/>}/>
         <Route path="/cart" element={<Cart/>}/>
       </Routes>
+
+      <Footer/>
     </>
   )
 }

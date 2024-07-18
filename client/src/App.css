@@ -68,6 +68,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 300px;
   > a > p {
     font-size: 20px;
     font-family: 'Urbanist';
@@ -120,9 +121,16 @@ a {
 }
 #homeOrderBtn {
   background-color: #529d65;
-  color: #235945;
+  color: #f1fac9;
   width: 150px;
+  box-shadow: #235945ce 4px 4px 4px;
+  transition: 0.5s;
 
+}
+
+#homeOrderBtn:hover {
+  box-shadow: none;
+  border: #235945 1px solid;
 }
 
 .imgHolder {
@@ -318,7 +326,13 @@ a {
   flex-direction: row;
   align-items: center;
   border-radius: 20px;
+  box-shadow:#235945c0 10px 10px 10px ;
+  transition: 0.75s;
 }
+.reviewCard:hover{
+  transform:scaleX(1.2) scaleY(1.2);
+}
+
 
 .reviewImg {
   height: 100px;
@@ -335,6 +349,7 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 75px;
+  box-shadow: #23594588 7px 7px 7px;
 
 }
 
@@ -352,6 +367,7 @@ a {
   padding-right: 20px;
   width: 400px;
   text-align: left;
+  box-shadow: #2135478f 5px 5px 5px;
   > h2 {
     margin: 0px;
     font-family: 'Eugusto';
@@ -404,4 +420,147 @@ a {
 .introTop {
   font-family: 'Urbanist';
   font-size: 30px;
+}
+
+.tryItem {
+  height: 25px;
+  width: 70px;
+  background-color: #235926;
+  color: #fbfdf2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Urbanist';
+  box-shadow: 2px 2px 2px #000000b0;
+  transition: 0.75s;
+}
+
+.tryItem:hover {
+  box-shadow: none;
+}
+
+#footer {
+  height: 600px;
+  width: 100%;
+  background-color: #235945;
+  box-shadow: inset  #0000007c 0px 7px 5px 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+#topFooter{
+  /* border: 2px solid; */
+  padding-top: 70px;
+  display: flex;
+  flex: row;
+  padding-bottom: 30px;
+  padding-left: 70px;
+  padding-right: 20px;
+  justify-content: center;
+}
+
+.mapContainer {
+  height: 400px;
+  width: 600px;
+  margin-left: 30px;
+  border-radius: 20px;
+}
+
+#details{
+  /* border: 2px solid; */
+  height: 400px;
+  width: 900px;
+  display: flex;
+  flex: row;
+  margin-left: 80px;
+}
+
+.detailsInfo{
+  height: 300px;
+  width: 200px;
+  /* border: 2px solid; */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 10px;
+  margin-left: 20px;
+  > h2 {
+    font-family: 'Eugusto';
+    color: #fbfdf2;
+    font-size: 30px;
+    margin-bottom: 0px;
+  }
+  > p {
+    font-family: 'Urbanist';
+    color: white;
+    font-size: 19px;
+    text-align: left;
+    margin-bottom: 0px;
+  }
+  > a > p {
+    font-family: 'Urbanist';
+    color: white;
+    font-size: 19px;
+    text-align: left;
+    margin-bottom: 0px;
+  }
+
+}
+
+
+
+
+#bottomFooter{
+  /* border: 2px solid; */
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid; */
+  margin-left: 210px;
+  > p {
+    font-family: 'Urbanist';
+    color: white;
+    font-size: 19px;
+    text-align: left;
+    margin-bottom: 0px;
+    text-align: center;
+    margin: 0px;
+  }
+}
+
+.copyrighticon{
+  color: white;
+  margin: 2px;
+}
+
+#icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin-right: 225px;
+  justify-content: space-around;
+}
+.facebookIcon {
+  color: white;
+}
+.twitterIcon{
+  color: white;
+}
+.youtubeIcon{
+  color:white;
+}
+.linkedIn{
+  color: white;
 }

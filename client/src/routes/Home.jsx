@@ -102,6 +102,10 @@ const Home = () => {
                                         <img className="reviewImg" src={review.product.imageUrl}/>
                                     </div>
                                     <h2>{review.product.name}</h2>
+
+                                    {/*CHANGE THIS BUTTON LATER TO LEAD TO SINGLE ITEM*/}
+                                    <button className="tryItem">Try it!</button>
+                                    
                                 </div>
                               
                                 <div className="reviewInfo">
