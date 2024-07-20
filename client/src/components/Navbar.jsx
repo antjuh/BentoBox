@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import logo from "../assets/logo.png";
-import { AccountCircle, Menu, MenuBook, MenuOpen, RamenDining, ShoppingBasket } from "@mui/icons-material";
+import { AccountCircle, RamenDining, ShoppingBasket } from "@mui/icons-material";
 
 
 
@@ -17,18 +17,25 @@ const NavBar = () => {
                     <img src={logo} className="navLogo"/>
                 </Link>
                 <div className="navLinks">
-                    <Link to={"/menu"}>
-                        <p>Menu</p>
-                        <RamenDining/>
-                    </Link>
-                    <Link to={"/cart"}>
-                        <p>Cart</p>
-                        <ShoppingBasket/>
-                    </Link>
-                    <Link to={"/account"}>
-                        <p>Account</p>
-                        <AccountCircle/>
-                    </Link>
+                    <div className="navLink">
+                        <Link to={"/menu"}>
+                            <p>Menu</p>
+                            <RamenDining className="navIcons"/>
+                        </Link>
+                    </div>
+                    <div className="navLink">
+                        <Link to={"/cart"}>
+                            <p>Cart</p>
+                            <ShoppingBasket className="navIcons"/>
+                        </Link>
+                    </div>
+                    <div className="navLink">
+                        <Link to={"/account"}>
+                            <p>Account</p>
+                            <AccountCircle className="navIcons"/>
+                        </Link>
+                    </div>
+                    
                     
                 </div>
                 

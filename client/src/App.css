@@ -66,20 +66,44 @@ a {
 .navLinks {
   padding: 40px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 300px;
-  > a > p {
-    font-size: 20px;
-    font-family: 'Urbanist';
-    color: #213547;
-  }
+  width: 400px;
+  
 }
 
 .navLogo {
   height: 70px;
   margin: 5px;
 
+}
+.navLink{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  /* border: 2px solid; */
+  /* > a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  } */
+  > a > p {
+    font-size: 20px;
+    font-family: 'Urbanist';
+    color: #213547;
+    margin: 0px;
+    padding: 0px;
+    
+  }
+}
+
+.navIcons{
+  color: #213547;
+  margin: 0px;
 }
 
 .intro {
@@ -267,19 +291,6 @@ a {
 }
 
 
-.allProducts {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.itemCard {
-  border: 3px solid black;
-  height: 100px;
-  width: 100px;
-  margin: 20px;
-}
 
 #butStatement {
   background-color: #fbfdf2;
@@ -442,7 +453,7 @@ a {
 }
 
 #footer {
-  height: 600px;
+  height: 575px;
   width: 100%;
   background-color: #235945;
   box-shadow: inset  #0000007c 0px 7px 5px 2px;
@@ -462,7 +473,7 @@ a {
 }
 
 .mapContainer {
-  height: 400px;
+  height: 350px;
   width: 600px;
   margin-left: 30px;
   border-radius: 20px;
@@ -514,7 +525,7 @@ a {
 
 #bottomFooter{
   /* border: 2px solid; */
-  height: 150px;
+  height: 125px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -563,4 +574,51 @@ a {
 }
 .linkedIn{
   color: white;
+}
+
+.menuContent{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.categories{
+  height: 60px;
+  /* border: 2px solid; */
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  border-bottom: #213547 2px solid;
+}
+.catButton{
+  background-color: #fbfdf2;
+  color:#235945;
+  border-radius: 20px;
+  border: #235926 2px solid;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 20px;
+  height: 50px;
+  width: 100px;
+}
+
+.allProducts {
+  /* border: 2px solid; */
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.itemCard {
+  border: 3px solid black;
+  height: 100px;
+  width: 100px;
+  margin: 20px;
 }

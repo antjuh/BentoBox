@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { GoogleMap, Marker, useLoadScript} from "@react-google-maps/api";
 import { useMemo } from "react";
-import { Copyright, Facebook, LinkedIn, Twitter, YouTube, YoutubeSearchedFor } from "@mui/icons-material";
+import { Copyright, Facebook, LinkedIn, Twitter, YouTube } from "@mui/icons-material";
 
 const Footer = () => {
 

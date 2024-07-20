@@ -9,9 +9,9 @@ const prisma = new PrismaClient();
 categoryRouter.get('/', async (req, res) => {
     try {
         const categories = await prisma.categories.findMany({
-            include: {
-                products: true,
-            },
+            // include: {
+            //     products: true,
+            // },
         });
         res.send(categories);
     } catch(err) {
