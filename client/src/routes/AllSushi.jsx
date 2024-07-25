@@ -1,5 +1,7 @@
+import { Add, Close, Delete } from "@mui/icons-material";
 import React from "react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const AllSushi = () => {
@@ -8,6 +10,8 @@ const AllSushi = () => {
     const [categories, setCategories] = useState([]);
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [filteredSushi, setFilteredSushi] = useState([]);
+
+    const admin = localStorage.getItem("admin")
 
     
     useEffect(()=>{
@@ -62,6 +66,12 @@ const AllSushi = () => {
 
     },[selectedCategories, sushis])
 
+    const deleteItem = async (id) => {
+        const deleteItem = await fetch(`/api/products/${id}`,{
+            method: "DELETE"
+        })
+        window.location.reload();
+    }
 
 
 
@@ -85,17 +95,20 @@ const AllSushi = () => {
                             <div onClick={()=>{
                                 if(selectedCategories.includes(category.name)){
                                     removeCategory(category.name);
+                                    
                                 }else{
                                     addCategory(category.name);
+                              
                                 }
-                            }} className="catButton" key={category.id}>
+                            }} className={selectedCategories.includes(category.name)?'selectedCat':'catButton'} key={category.id}>
                                 {category.name}
                             </div>
                         )   
                     })
                 }
-                <div onClick={()=>{resetCategory()}} className="catButton">
-                All
+                <div onClick={()=>{resetCategory()}} className={selectedCategories.length>0?'clearCat':'hiddenBtn'}>
+                Clear
+                <Close/>
                 </div>
                 
                 </div>
@@ -103,12 +116,24 @@ const AllSushi = () => {
                 {filteredSushi.map(item => {
                     return (
                         <div className="itemCard" key={item.id}>
+                            <img src={item.imageUrl} className="itemCardImg"/>
                             <p>{item.name}</p>
+
+
                             <p>${item.price}</p>
+                            <div>
+                                <Link to={`/menu/${item.id}`}><button className="toSingleItem">Order Now</button></Link>
+                                {admin?<div onClick={()=>{deleteItem(item.id)}} className="deleteReview"><Delete/></div>:<></>}
+                            </div>
                         </div>
                     
                     )
                 })}
+                {admin?<Link to="/admin/newproduct">
+                    <div className="itemCard">
+                    <Add/>
+                    </div>
+                </Link>:<></>}
                 </div>
             </div>
         </>

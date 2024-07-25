@@ -117,6 +117,21 @@ cartRouter.delete('/:id/:productId', async (req, res) => {
     }
 });
 
+cartRouter.delete('/:id/:productId/deleteAll', async (req, res) => {
+    try {
+        const deleteAll = await prisma.orderProducts.deleteMany({
+            where: {
+                orderId: parseInt(req.params.id),
+                productId: parseInt(req.params.productId)
+            }
+        })
+        res.send("Deleted all of that item.")
+    } catch(err) {
+        console.log(err)
+        res.sendStatus(500)
+    }
+})
+
 
 
 module.exports = cartRouter;

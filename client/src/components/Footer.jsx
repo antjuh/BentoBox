@@ -34,6 +34,7 @@ const Footer = () => {
                             <Link to={"/menu"}><p>Menu</p></Link>
                             <Link to={"/account"}><p>Account</p></Link>
                             <Link to={"/"}><p>Home</p></Link>
+                            <Link to={"/admin"}><p>Admin</p></Link>
                         </div>
                         <div className="detailsInfo">
                             <h2>Contact Us</h2>

@@ -18,7 +18,7 @@ const Home = () => {
 
     useEffect(()=>{
         const fetchTopThree = async () => {
-            const response = await fetch('./api/reviews/topThree');
+            const response = await fetch('./api/reviews/topThree/3');
             const result = await response.json();
             setTopReviews(result)
         }
@@ -104,7 +104,7 @@ const Home = () => {
                                     <h2>{review.product.name}</h2>
 
                                     {/*CHANGE THIS BUTTON LATER TO LEAD TO SINGLE ITEM*/}
-                                    <button className="tryItem">Try it!</button>
+                                    <button className="tryItem"><Link to={`/menu/${review.product.id}`}>Try it!</Link></button>
                                     
                                 </div>
                               
